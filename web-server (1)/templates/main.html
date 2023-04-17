@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shirley's Temperature Chamber</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="top">
+          <div class="nav">
+            <p class="date"></p>
+            <ion-icon name="thermometer-outline" class="user"></ion-icon>
+          </div>
+
+          <p style="font-size: 32px"> Mockup Oven </p>
+          <p style="font-size: 26px"> Set Temperature: </p>
+          <span class="card-title d-block"></span>
+
+
+          <div class="primary">
+            <input type="number" id="main-unit" />
+            <select class="main-unit-options reset">
+              <option>Celsius</option>
+              <option>Kelvin</option>
+              <option>Fahrenheit</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <p style="font-size: 26px; color:#f54c4a"> Current Temperature: </p>
+          <div class="secondary">
+            <input type="number" id="second-unit" />
+            <select class="second-unit-options reset">
+              <option>Celsius</option>
+              <option>Kelvin</option>
+              <option>Fahrenheit</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+ <div id="chart-container">
+    <canvas id="temperature-chart" ></canvas>
+    <div class="chart-buttons">
+     <button id="start-chart-button">Start Recodring</button>
+     <button id="stop-chart-button">Stop Recording</button>
+  </div>
+  </div>
+
+
+    </div>
+    <script src='{{ url_for('static', filename='index.js') }}'></script>
+  </body>
+</html>

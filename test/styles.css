@@ -1,0 +1,13 @@
+#chart-container {
+    width: 50%;
+    height: 400px;
+    margin-left: 20px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    #chart-container {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  
